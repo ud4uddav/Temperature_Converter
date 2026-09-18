@@ -4,7 +4,7 @@ A simple, responsive temperature converter built with HTML, CSS, and JavaScript.
 
 ## Live demo
 
-[Open the Temperature Converter](https://ud4uddav.github.io/Temperature_Converter/)
+https://ud4uddav.github.io/Temperature_Converter/
 
 ## Run locally
 
