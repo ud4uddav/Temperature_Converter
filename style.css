@@ -1,0 +1,106 @@
+/* Reset the default box model so sizing stays predictable. */
+* {
+  box-sizing: border-box;
+}
+
+/* Center the converter card in the viewport. */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #eef5ff;
+}
+
+/* Give the app a compact, readable card layout. */
+.converter {
+  width: min(100%, 460px);
+  padding: 32px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgb(31 41 55 / 12%);
+}
+
+h1 {
+  margin: 0;
+  color: #1d4ed8;
+}
+
+.intro {
+  margin: 10px 0 24px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 700;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input,
+select {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid #bfdbfe;
+  border-color: #2563eb;
+}
+
+/* Put unit selectors side-by-side when enough space is available. */
+.unit-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 18px 0 24px;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  color: #ffffff;
+  background: #2563eb;
+  font-weight: 700;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.result {
+  min-height: 28px;
+  margin: 24px 0 0;
+  padding: 13px;
+  border-radius: 8px;
+  color: #1e3a8a;
+  background: #eff6ff;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Stack the unit fields on very narrow screens. */
+@media (max-width: 420px) {
+  .converter {
+    padding: 24px;
+  }
+
+  .unit-fields {
+    grid-template-columns: 1fr;
+  }
+}

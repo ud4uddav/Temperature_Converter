@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- The main converter card keeps the page focused and easy to use. -->
+    <main class="converter" aria-labelledby="page-title">
+      <h1 id="page-title">Temperature Converter</h1>
+      <p class="intro">Convert a temperature between Celsius, Fahrenheit, and Kelvin.</p>
+
+      <form id="converter-form">
+        <label for="temperature">Temperature</label>
+        <input
+          id="temperature"
+          name="temperature"
+          type="number"
+          inputmode="decimal"
+          placeholder="e.g. 25"
+          step="any"
+          required
+        />
+
+        <div class="unit-fields">
+          <div>
+            <label for="from-unit">From</label>
+            <select id="from-unit" name="from-unit">
+              <option value="celsius">Celsius (°C)</option>
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+              <option value="kelvin">Kelvin (K)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="to-unit">To</label>
+            <select id="to-unit" name="to-unit">
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+              <option value="celsius">Celsius (°C)</option>
+              <option value="kelvin">Kelvin (K)</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit">Convert</button>
+      </form>
+
+      <!-- aria-live announces the new result to screen-reader users. -->
+      <p id="result" class="result" aria-live="polite">Enter a value to get started.</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
